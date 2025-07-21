@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | Modern Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="PORTFOLIO-TEMPLATE.css">
+</head>
+<body class="relative overflow-x-hidden">
+    <!-- Background blobs -->
+    <div class="shape-blob" style="left:70%; top:10%;"></div>
+    <div class="shape-blob" style="left:10%; top:50%;"></div>
+    <div class="shape-blob" style="left:80%; top:70%;"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold gradient-text">PORTFOLIO</a>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-800 hover:text-gray-900 font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-800 hover:text-gray-900 font-medium">About</a>
+                    <a href="#skills" class="nav-link text-gray-800 hover:text-gray-900 font-medium">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-800 hover:text-gray-900 font-medium">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-800 hover:text-gray-900 font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-6 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-800 hover:text-gray-900">Home</a>
+            <a href="#about" class="block py-2 text-gray-800 hover:text-gray-900">About</a>
+            <a href="#skills" class="block py-2 text-gray-800 hover:text-gray-900">Skills</a>
+            <a href="#projects" class="block py-2 text-gray-800 hover:text-gray-900">Projects</a>
+            <a href="#contact" class="block py-2 text-gray-800 hover:text-gray-900">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 title-font">
+                    <span class="gradient-text">Creative</span> <br>
+                    <span class="text-gray-800">Designer</span> <br>
+                    <span class="text-gray-600">& Developer</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                    I craft digital experiences that are beautiful, functional, and user-centric. Let's bring your ideas to life with innovative design and cutting-edge technology.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-8 py-3 rounded-full gradient-bg text-white font-medium btn-hover shadow-lg">
+                        View Work
+                    </a>
+                    <a href="#contact" class="px-8 py-3 rounded-full border-2 border-gray-800 text-gray-800 font-medium hover:bg-gray-800 hover:text-white transition-all duration-300">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center relative">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full gradient-bg absolute -z-10 top-6 left-6"></div>
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
+                         alt="Creative Professional" 
+                         class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-8 border-white hero-image shadow-2xl">
+                </div>
+                <div class="absolute bottom-0 left-0 md:left-auto md:right-0 bg-white p-4 rounded-lg shadow-xl w-48">
+                    <div class="flex items-center mb-2">
+                        <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                        <span class="text-sm font-medium">Available for work</span>
+                    </div>
+                    <p class="text-xs text-gray-600">Currently accepting new projects for Q3 2023</p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down hidden md:block">
+            <a href="#about" class="text-gray-800 animate-bounce">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 title-font">
+                    <span class="gradient-text">About</span> <span class="text-gray-800">Me</span>
+                </h2>
+                <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    A passionate creative professional with a unique blend of design and development skills.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-12 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                                 alt="About Me" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg w-40">
+                            <div class="flex items-center">
+                                <i class="fas fa-award text-yellow-500 text-xl mr-2"></i>
+                                <span class="font-bold">5+ Years</span>
+                            </div>
+                            <p class="text-xs mt-1">Experience</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-6">Who am I?</h3>
+                    <p class="text-gray-600 mb-6">
+                        I'm a multidisciplinary designer and developer with a passion for creating digital experiences that are both beautiful and functional. With a background in visual design and front-end development, I bridge the gap between aesthetics and technology.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-palette text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg">Design</h4>
+                            </div>
+                            <p class="text-gray-600">
+                                User Interface, User Experience, Brand Identity, Motion Design, and Visual Communication.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-md card-hover">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-code text-xl"></i>
+                                </div>
+                                <h4 class="font-bold text-lg">Development</h4>
+                            </div>
+                            <p class="text-gray-600">
+                                Front-end Development, Responsive Design, Web Applications, and Interactive Experiences.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="px-6 py-2 bg-gray-800 text-white rounded-full flex items-center">
+                            <i class="fas fa-download mr-2"></i> Download CV
+                        </a>
+                        <a href="#contact" class="px-6 py-2 border-2 border-gray-800 text-gray-800 rounded-full flex items-center hover:bg-gray-800 hover:text-white transition-all">
+                            <i class="fas fa-paper-plane mr-2"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 title-font">
+                    <span class="gradient-text">My</span> <span class="text-gray-800">Skills</span>
+                </h2>
+                <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    A diverse set of skills that allow me to tackle projects from concept to completion.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Design Skills</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">UI/UX Design</span>
+                                <span class="font-bold">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Brand Identity</span>
+                                <span class="font-bold">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Motion Design</span>
+                                <span class="font-bold">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Typography</span>
+                                <span class="font-bold">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-8">Development Skills</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">HTML/CSS</span>
+                                <span class="font-bold">98%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">JavaScript</span>
+                                <span class="font-bold">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">React</span>
+                                <span class="font-bold">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Node.js</span>
+                                <span class="font-bold">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-8 text-center">Tools & Technologies</h3>
+                
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="w-20 h-20 bg-white rounded-xl shadow-md flex items-center justify-center card-hover">
+                        <i class="fab fa-figma text-4xl text-purple-600"></i>
+                    </div>
+                    <div class="w-20 h-20 bg-white rounded-xl shadow-md flex items-center justify-center card-hover">
+                        <i class="fab fa-adobe text-4xl text-red-600"></i>
+                    </div>
+                    <div class="w-20 h-20 bg-white rounded-xl shadow-md flex items-center justify-center card-hover">
+                        <i class="fab fa-react text-4xl text-blue-500"></i>
+                    </div>
+                    <div class="w-20 h-20 bg-white rounded-xl shadow-md flex items-center justify-center card-hover">
+                        <i class="fab fa-js text-4xl text-yellow-500"></i>
+                    </div>
+                    <div class="w-20 h-20 bg-white rounded-xl shadow-md flex items-center justify-center card-hover">
+                        <i class="fab fa-git-alt text-4xl text-orange-600"></i>
+                    </div>
+                    <div class="w-20 h-20 bg-white rounded-xl shadow-md flex items-center justify-center card-hover">
+                        <i class="fas fa-database text-4xl text-blue-700"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 title-font">
+                    <span class="gradient-text">Featured</span> <span class="text-gray-800">Projects</span>
+                </h2>
+                <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    A selection of my recent work showcasing my design and development capabilities.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card h-80 rounded-xl overflow-hidden relative">
+                    <div class="project-inner w-full h-full">
+                        <div class="project-front bg-white p-6 flex flex-col h-full">
+                            <div class="w-full h-40 rounded-lg overflow-hidden mb-4">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                     alt="Project 1" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                            <p class="text-gray-600 text-sm mb-4">A modern e-commerce solution with seamless UX</p>
+                            <div class="mt-auto flex flex-wrap gap-2">
+                                <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">UI/UX</span>
+                                <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">React</span>
+                                <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">Node.js</span>
+                            </div>
+                        </div>
+                        <div class="project-back gradient-bg p-6 text-white flex flex-col justify-center items-center">
+                            <h3 class="text-xl font-bold mb-4">E-commerce Platform</h3>
+                            <p class="text-sm mb-6 text-center">Designed and developed a complete e-commerce solution with custom CMS, payment integration, and analytics dashboard.</p>
+                            <a href="#" class="px-6 py-2 bg-white text-gray-800 rounded-full font-medium">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card h-80 rounded-xl overflow-hidden relative">
+                    <div class="project-inner w-full h-full">
+                        <div class="project-front bg-white p-6 flex flex-col h-full">
+                            <div class="w-full h-40 rounded-lg overflow-hidden mb-4">
+                                <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                                     alt="Project 2" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Mobile Banking App</h3>
+                            <p class="text-gray-600 text-sm mb-4">Secure financial management on the go</p>
+                            <div class="mt-auto flex flex-wrap gap-2">
+                                <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">Mobile</span>
+                                <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">React Native</span>
+                                <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">Security</span>
+                            </div>
+                        </div>
+                        <div class="project-back gradient-bg p-6 text-white flex flex-col justify-center items-center">
+                            <h3 class="text-xl font-bold mb-4">Mobile Banking App</h3>
+                            <p class="text-sm mb-6 text-center">Led the design of a mobile banking application with biometric authentication and personalized financial insights.</p>
+                            <a href="#" class="px-6 py-2 bg-white text-gray-800 rounded-full font-medium">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card h-80 rounded-xl overflow-hidden relative">
+                    <div class="project-inner w-full h-full">
+                        <div class="project-front bg-white p-6 flex flex-col h-full">
+                            <div class="w-full h-40 rounded-lg overflow-hidden mb-4">
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                     alt="Project 3" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">SaaS Dashboard</h3>
+                            <p class="text-gray-600 text-sm mb-4">Data visualization and analytics platform</p>
+                            <div class="mt-auto flex flex-wrap gap-2">
+                                <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">Dashboard</span>
+                                <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">Data Viz</span>
+                                <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">React</span>
+                            </div>
+                        </div>
+                        <div class="project-back gradient-bg p-6 text-white flex flex-col justify-center items-center">
+                            <h3 class="text-xl font-bold mb-4">SaaS Dashboard</h3>
+                            <p class="text-sm mb-6 text-center">Created a comprehensive analytics dashboard with interactive charts, real-time data, and custom reporting tools.</p>
+                            <a href="#" class="px-6 py-2 bg-white text-gray-800 rounded-full font-medium">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#" class="px-8 py-3 rounded-full border-2 border-gray-800 text-gray-800 font-medium hover:bg-gray-800 hover:text-white transition-all duration-300 inline-flex items-center">
+                    <i class="fas fa-briefcase mr-2"></i> View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 title-font">
+                    <span class="gradient-text">Client</span> <span class="text-gray-800">Testimonials</span>
+                </h2>
+                <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    What people I've worked with say about my work.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                 alt="Client 1" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">CEO, TechStart</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Working with this designer was a game-changer for our product. They understood our vision immediately and delivered beyond our expectations."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                 alt="Client 2" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-sm text-gray-600">Product Manager, Finova</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "The attention to detail and user-centric approach resulted in a product that our customers love. The development work was clean and efficient."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                 alt="Client 3" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Emma Rodriguez</h4>
+                            <p class="text-sm text-gray-600">Marketing Director, BrandHive</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">
+                        "Our rebrand was a huge success thanks to their creative direction. They captured our essence perfectly and delivered stunning visual assets."
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 title-font">
+                    <span class="gradient-text">Get In</span> <span>Touch</span>
+                </h2>
+                <div class="w-20 h-1 gradient-bg mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto">
+                    Have a project in mind or want to discuss potential opportunities? I'd love to hear from you.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Let's Talk About Your Project</h3>
+                    
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 text-sm font-medium">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border-0 border-b-2 border-gray-700 focus:border-white focus:outline-none contact-input" placeholder="John Doe">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium">Your Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-800 border-0 border-b-2 border-gray-700 focus:border-white focus:outline-none contact-input" placeholder="john@example.com">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block mb-2 text-sm font-medium">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 bg-gray-800 border-0 border-b-2 border-gray-700 focus:border-white focus:outline-none contact-input" placeholder="Project Inquiry">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-2 text-sm font-medium">Your Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border-0 border-b-2 border-gray-700 focus:border-white focus:outline-none contact-input" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="px-8 py-3 rounded-full gradient-bg text-white font-medium btn-hover shadow-lg w-full md:w-auto">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Location</h4>
+                                <p class="text-gray-300">San Francisco, CA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p class="text-gray-300">hello@creativeportfolio.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Phone</h4>
+                                <p class="text-gray-300">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h4 class="font-bold mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:gradient-bg transition-all">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:gradient-bg transition-all">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:gradient-bg transition-all">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:gradient-bg transition-all">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-800 text-gray-300">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-2xl font-bold gradient-text">PORTFOLIO</a>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-sm">&copy; 2023 Creative Portfolio. All rights reserved.</p>
+                    <p class="text-xs mt-1">Designed & Developed with <i class="fas fa-heart text-red-500"></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="PORTFOLIO-TEMPLATE.js"></script>
+</body>
+</html>
